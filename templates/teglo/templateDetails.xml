@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>teglo</name>
+	<creationDate>June 2011</creationDate>
+	<author>Torsten Freyda</author>
+	<authorEmail>admin@teglo.info</authorEmail>
+	<authorUrl>http://www.teglo.info</authorUrl>
+	<copyright>Copyright (C) 2010 - 2011 by Teglo, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>2.0.1</version>
+	<description>TPL_TEGLO_XML_DESCRIPTION</description>
+	<files>
+		<folder>images</folder>
+		<folder>_html</folder>
+		<folder>html</folder>
+		<folder>language</folder>
+		<folder>css</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>params.ini</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+	</files>
+	
+	<positions>
+		<position>left</position>
+		<position>footer</position>
+		<position>debug</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+	</positions>
+	
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders.
+	-->
+	<languages>
+		<language tag="en-GB">language/en-GB.tpl_teglo.ini</language>
+		<language tag="en-GB">language/en-GB.tpl_teglo.sys.ini</language>
+		<language tag="de-DE">language/de-DE.tpl_teglo.ini</language>
+		<language tag="de-DE">language/de-DE.tpl_teglo.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="TEGLO_COLORS">			
+			<field
+			  name="primcolor" 
+			  type="text" 
+			  default="#" 
+			  label="TEGLO_PRIMARYCOLOR" 
+			  description="TEGLO_DESPRIMARYCOLOR" size="8">
+			</field>
+			<field
+			  name="secprimcolor" 
+			  type="text" 
+			  default="#" 
+			  label="TEGLO_SECPRIMARYCOLOR" 
+			  description="TEGLO_DESSECPRIMARYCOLOR" 
+			  size="8">
+			</field>
+			<field
+			  name="seccolor" 
+			  type="text" 
+			  default="#" 
+			  label="TEGLO_SECUNDARYCOLOR" 
+			  description="TEGLO_DESSECUNDARYCOLOR" 
+			  size="8">
+			</field>
+			<field
+			  name="backcolor" 
+			  type="text" 
+			  default="#" 
+			  label="TEGLO_BACKCOLOR" 
+			  description="DESBACKCOLOR" 
+			  size="8">
+			</field>
+			</fieldset>
+			<fieldset name="TEGLO_FONTS">
+			<field
+			  name="maincolor" 
+			  type="text" 
+			  default="#" 
+			  label="MAINCOLOR" 
+			  description="DESMAINCOLOR" 
+			  size="8">
+			</field>
+			<field
+			  name="firstfont" 
+			  type="text" 
+			  default="" 
+			  label="1STFONT" 
+			  description="DES1STFONT" 
+			  size="15">
+			</field>
+			<field 
+			  name="secondfont" 
+			  type="text" 
+			  default="" 
+			  label="2NDFONT" 
+			  description="DES2NDFONT" 
+			  size="15">
+			</field>
+			<field 
+			  name="thirtfont" 
+			  type="text" 
+			  default="" 
+			  label="3RDFONT" 
+			  description="DES3RDFONT" 
+			  size="15">
+			</field>	
+			</fieldset>
+			<fieldset name="TEGLO_HEAD">
+			<field 
+			  name="headbackcolor" 
+			  type="text" 
+			  default="#" 
+			  label="HEADBACKCOLOR" 
+			  description="DESHEADBACKCOLOR" 
+			  size="8">
+			</field>
+			<field 
+			  name="headerheight" 
+			  type="text" 
+			  default="" 
+			  label="HEADERHEIGHT" 
+			  description="DESHEADERHEIGHT" 
+			  size="5">
+			</field>
+			<field 
+			  name="logoType" 
+			  type="list" 
+			  default="image" 
+			  label="Logo type" 
+			  description="LOGO TYPE DESCRIPTION">
+                        <option value="image">Image</option>
+                        <option value="text">Text</option>
+            </field>
+            <field
+              name="logoimage" 
+              type="imagelist" 
+              default="" 
+              label="Select an image" 
+              description="" 
+              directory="/templates/teglo/images/logo" 
+              exclude="" 
+              stripext="">
+            </field>
+            <field 
+              name="logoText" 
+              type="text" 
+              default="" 
+              size="50" 
+              label="Logo text" 
+              description="LOGO TEXT DESCRIPTION">
+            </field>
+            <field 
+              name="sloganText" 
+              type="text" 
+              default="" 
+              size="50" 
+              label="Slogan" 
+              description="SLOGAN DESCRIPTION">
+            </field>
+            <field 
+              name="backimage" 
+              type="imagelist" 
+              default="" 
+              label="SELECT AN BACKIMAGE" 
+              description="" 
+              directory="/templates/teglo/images/" 
+              exclude="" 
+              stripext="">
+            </field>	
+			</fieldset>
+			<fieldset name="TEGLO_LEFT_SIDE">
+			<field 
+			  name="leftbackcolor" 
+			  type="text" 
+			  default="#" 
+			  label="LEFTBACKCOLOR" 
+			  description="DESLEFTBACKCOLOR" 
+			  size="8">
+			</field>
+			<field
+			  name="leftwidth" 
+			  type="text" 
+			  default="" 
+			  label="LEFTWIDTH" 
+			  description="DESLEFTWIDTH" 
+			  size="5">
+			</field>
+			<field
+			  name="entity" 
+			  type="text" 
+			  default="" 
+			  label="ENTITY" 
+			  description="DESENTITY" 
+			  size="5">
+			</field>
+			<field
+			  name="leftbackimage" 
+			  type="imagelist" 
+			  default="" 
+			  label="SELECT AN LEFTBACKIMAGE" 
+			  description="DESSELECT AN LEFTBACKIMAGE" 
+			  directory="/templates/teglo/images/" 
+			  exclude="" 
+			  stripext="">
+			</field>
+			</fieldset>
+			<fieldset name="TEGLO_CONTENTSECTION">
+			<field
+			  name="framecolor" 
+			  type="text" 
+			  default="#" 
+			  label="FRAMECOLOR" 
+			  description="DESFRAMECOLOR" 
+			  size="8">
+			</field>
+			<field
+			  name="framecolorbox" 
+			  type="text" 
+			  default="#" 
+			  label="FRAMECOLORBOX" 
+			  description="DESFRAMECOLORBOX" 
+			  size="8">
+			</field>
+			<field 
+			  name="backcolorbox" 
+			  type="text" 
+			  default="#" 
+			  label="BACKCOLORBOX" 
+			  description="DESBACKCOLORBOX" 
+			  size="8">
+			</field>
+			<field
+			  name="fontcolorbox" 
+			  type="text" 
+			  default="#" 
+			  label="FONTCOLORBOX" 
+			  description="DESFONTCOLORBOX" 
+			  size="8">
+			</field>
+		    </fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_podcastmanager</name>
+	<creationDate>2013-08-27</creationDate>
+	<author>Michael Babker</author>
+	<copyright>(C) 2011-2013 Michael Babker</copyright>
+	<authorEmail>mbabker@flbab.com</authorEmail>
+	<authorUrl>http://www.babdev.com</authorUrl>
+	<version>2.1.0</version>
+	<license>GNU/GPL Version 2 or later</license>
+	<description>COM_PODCASTMANAGER_XML_DESCRIPTION</description>
+	<menu link="option=com_podcastmanager">COM_PODCASTMANAGER</menu>
+	<scriptfile>script.php</scriptfile>
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>podcastmanager.php</filename>
+		<filename>router.php</filename>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.mysql.sql</file>
+			<file charset="utf8" driver="postgresql">sql/install.postgresql.sql</file>
+            <file charset="utf8" driver="sqlsrv">sql/install.sqlsrv.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/uninstall.mysql.sql</file>
+			<file charset="utf8" driver="postgresql">sql/uninstall.postgresql.sql</file>
+            <file charset="utf8" driver="sqlsrv">sql/uninstall.sqlsrv.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+			<schemapath type="postgresql">sql/updates/postgresql</schemapath>
+            <schemapath type="sqlsrv">sql/updates/sqlsrv</schemapath>
+		</schemas>
+	</update>
+	<media destination="podcastmanager" folder="media">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<administration>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>podcastmanager.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>language</folder>
+			<folder>liveupdate</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<menu img="../media/podcastmanager/images/icons/icon-16-podcastmanager.png">COM_PODCASTMANAGER</menu>
+	</administration>
+	<!-- Below section is data for Akeeba Backup System Restore Points -->
+	<restorepoint>
+		<customdirs>
+			<dir>administrator/components/com_podcastmedia</dir>
+			<dir>components/com_podcastmedia</dir>
+			<dir>libraries/getid3</dir>
+			<dir>media/com_podcastmanager</dir>
+			<dir>media/mediaelements</dir>
+			<dir>modules/mod_podcastmanager</dir>
+			<dir>modules/mod_podcastmanagerfeed</dir>
+			<dir>plugins/content/podcastmanager</dir>
+			<dir>plugins/editors-xtd/podcastmanager</dir>
+            <dir>plugins/finder/podcastmanager_feeds</dir>
+            <dir>plugins/finder/podcastmanager_podcasts</dir>
+			<dir>plugins/podcastmedia/user</dir>
+		</customdirs>
+		<extratables>
+			<table>podcastmanager_feeds</table>
+		</extratables>
+	</restorepoint>
+</extension>

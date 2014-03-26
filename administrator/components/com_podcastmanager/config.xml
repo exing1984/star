@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset
+		name="component"
+		label="COM_PODCASTMANAGER_FIELDSET_CONFIG_OPTIONS_LABEL"
+		description="COM_PODCASTMANAGER_FIELDSET_CONFIG_OPTIONS_DESCRIPTION">
+		<field
+			name="linkhandling"
+			type="list"
+			default="player"
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_LINKHANDLING_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_LINKHANDLING_DESCRIPTION">
+			<option value="custom">COM_PODCASTMANAGER_CONFIG_FIELD_LINKHANDLING_OPTION_CUSTOM</option>
+			<option value="link">COM_PODCASTMANAGER_CONFIG_FIELD_LINKHANDLING_OPTION_LINK</option>
+			<option value="player">COM_PODCASTMANAGER_CONFIG_FIELD_LINKHANDLING_OPTION_PLAYER</option>
+		</field>
+		<field
+			name="customcode"
+			type="textarea"
+			rows="5"
+			cols="30"
+			default=""
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_CUSTOMCODE_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_CUSTOMCODE_DESCRIPTION" />
+		<field
+			name="playerwidth"
+			type="text"
+			default=""
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_PLAYERWIDTH_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_PLAYERWIDTH_DESCRIPTION" />
+		<field
+			name="playerheight"
+			type="text"
+			default=""
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_PLAYERHEIGHT_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_PLAYERHEIGHT_DESCRIPTION" />
+		<field
+			name="videoheight"
+			type="text"
+			default=""
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_VIDEOHEIGHT_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_VIDEOHEIGHT_DESCRIPTION" />
+		<field
+			name="playerstyle"
+			type="text"
+			default=""
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_PLAYERSTYLE_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_PLAYERSTYLE_DESCRIPTION" />
+		<field
+			name="linktitle"
+			type="text"
+			default="Listen Now!"
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_LINKTITLE_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_LINKTITLE_DESCRIPTION" />
+		<field
+			name="tracking"
+			type="list"
+			default="none"
+			label="COM_PODCASTMANAGER_CONFIG_TRACKING_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_TRACKING_DESCRIPTION" >
+			<option value="none">COM_PODCASTMANAGER_CONFIG_OPTION_NONE</option>
+			<option value="blubrry">COM_PODCASTMANAGER_CONFIG_TRACKING_OPTION_BLUBRRY</option>
+			<option value="podtrac">COM_PODCASTMANAGER_CONFIG_TRACKING_OPTION_PODTRAC</option>
+		</field>
+		<field
+			name="trackname"
+			type="text"
+			default=""
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_TRACKNAME_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_TRACKNAME_DESCRIPTION" />
+		<field
+			name="minstability"
+			type="list"
+			default="alpha"
+			label="COM_PODCASTMANAGER_CONFIG_LIVEUPDATE_MINSTABILITY_LABEL"
+			description="COM_PODCASTMANAGER_CONFIG_LIVEUPDATE_MINSTABILITY_DESCRIPTION" >
+			<option value="alpha">COM_PODCASTMANAGER_CONFIG_LIVEUPDATE_STABILITY_ALPHA</option>
+			<option value="beta">COM_PODCASTMANAGER_CONFIG_LIVEUPDATE_STABILITY_BETA</option>
+			<option value="rc">COM_PODCASTMANAGER_CONFIG_LIVEUPDATE_STABILITY_RC</option>
+			<option value="stable">COM_PODCASTMANAGER_CONFIG_LIVEUPDATE_STABILITY_STABLE</option>
+		</field>
+		<field
+			name="enableLogging"
+			type="radio"
+			default="0"
+			label="COM_PODCASTMANAGER_CONFIG_FIELD_ENABLELOGGING_LABEL"
+			class="btn-group"
+			description="COM_PODCASTMANAGER_CONFIG_FIELD_ENABLELOGGING_DESCRIPTION">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+	</fieldset>
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			filter="rules"
+			validate="rules"
+			component="com_podcastmanager"
+			section="component" />
+	</fieldset>
+</config>

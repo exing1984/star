@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>mod_podcastmanager</name>
+	<creationDate>2013-08-27</creationDate>
+	<author>Michael Babker</author>
+	<copyright>(C) 2011-2013 Michael Babker</copyright>
+	<authorEmail>mbabker@flbab.com</authorEmail>
+	<authorUrl>http://www.babdev.com</authorUrl>
+	<version>2.1.0</version>
+	<license>GNU/GPL Version 2 or later</license>
+	<description>MOD_PODCASTMANAGER_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename module="mod_podcastmanager">mod_podcastmanager.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<media destination="mod_podcastmanager" folder="media">
+		<folder>images</folder>
+		<filename>index.html</filename>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic"
+				addfieldpath="/administrator/components/com_podcastmanager/models/fields" >
+				<field
+					name="text"
+					type="text"
+					label="MOD_PODCASTMANAGER_FIELD_TEXT_LABEL"
+					description="MOD_PODCASTMANAGER_FIELD_TEXT_DESCRIPTION" />
+				<field
+					name="feedname"
+					type="feedname"
+					class="inputbox"
+					label="MOD_PODCASTMANAGER_FIELD_FEEDNAME_LABEL"
+					size="1" />
+				<field
+					name="urischeme"
+					type="radio"
+					class="btn-group"
+					default="http"
+					label="MOD_PODCASTMANAGER_FIELD_URISCHEME_LABEL"
+					description="MOD_PODCASTMANAGER_FIELD_URISCHEME_DESCRIPTION">
+					<option
+						value="http">http://</option>
+					<option
+						value="itpc">itpc://</option>
+				</field>
+				<field
+					name="plainlink"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="MOD_PODCASTMANAGER_FIELD_PLAINLINK_LABEL"
+					description="MOD_PODCASTMANAGER_FIELD_PLAINLINK_DESCRIPTION">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="otherlink"
+					type="text"
+					label="MOD_PODCASTMANAGER_FIELD_OTHERLINK_LABEL"
+					description="MOD_PODCASTMANAGER_FIELD_OTHERLINK_DESCRIPTION" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="cache"
+					type="radio"
+					default="0"
+					label="MOD_PODCASTMANAGER_FIELD_CACHE_LABEL"
+					description="MOD_PODCASTMANAGER_FIELD_CACHE_DESCRIPTION">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
